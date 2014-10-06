@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="glossary">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 
 <html>
 <head>
@@ -15,7 +15,7 @@
 </head>
 <body>
   
-  <div id="glossary-popout" ng-controller="GlossaryController" ng-class="{'glossary-collapsed': !glossary_open}">
+  <div ng-app="glossary" id="glossary-popout" ng-controller="GlossaryController" ng-class="{'glossary-collapsed': !glossary_open}">
 
     <div class="glossary-main" >
       <h2>Glossary of terms</h2>
