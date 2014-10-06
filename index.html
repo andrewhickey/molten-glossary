@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="glossary">
+
+<html>
+<head>
+  <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"/>
+  <title>Glossary Test</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-scroll/angular-scroll.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="glossary-popout" ng-controller="GlossaryController" ng-class="{'glossary-collapsed': !glossary_open}">
+
+    <div class="glossary-main" >
+      <h2>Glossary of terms</h2>
+      <ul class="glossary-alphabet-list" du-scroll-container="glossary-scrollarea">
+        <li ng-repeat="letter in alphabet" class="glossary-letter"  ng-class="{'glossary-has-entries': letter.count > 0}">
+          <a href="#glossary-{{ letter.letter }}" du-scrollspy du-smooth-scroll>{{ letter.letter }}</a>
+        </li>
+      </ul>
+
+      <div id="glossary-scrollarea">
+        <section ng-repeat="letter in alphabet" id="glossary-{{ letter.letter }}">
+          <div letter="letter" definition-group></div>
+        </section>
+      </div>
+    </div>
+    
+    <div class="glossary-tab" ng-click="toggleGlossaryOpen()"><img src="glossary-tab.gif" alt=""></div>
+
+  </div>
+  
+</body>
+</html>

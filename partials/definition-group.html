@@ -1,0 +1,9 @@
+<div class="glossary-column glossary-column-left">
+  <span ng-class="{'glossary-has-entries': letter.count > 0}" class="glossary-letter">{{letter.letter}}</span>
+</div>
+
+<div class="glossary-column glossary-column-right">
+  <div ng-repeat="definition in definitions" class="glossary-definition">
+    <a href="{{definition.link}}">{{definition.word}}</a> - {{definition.definition}}
+  </div>  
+</div>

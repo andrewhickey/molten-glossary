@@ -1,0 +1,80 @@
+.glossary-alphabet-list {
+  list-style: none outside none;
+  padding: 0;
+}
+.glossary-alphabet-list li {
+	display: inline;	
+}
+.glossary-main {
+  width: 300px;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.5s;
+}
+.glossary-main > * {
+  width: 300px;
+  overflow-x: hidden;
+}
+.glossary-collapsed .glossary-main{
+  width: 0px;
+}
+.glossary-tab {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-transition: all 0.2s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.2s;
+}
+.glossary-collapsed .glossary-tab:hover {
+}
+.glossary-tab:hover {
+}
+#glossary-scrollarea {
+  height: 400px;
+  overflow-y: auto;
+}
+.glossary-column {
+  display: inline-block;
+}
+.glossary-column-left {
+  width: 20px;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+.glossary-column-right {
+  width: 200px;
+}
+.glossary-definition {
+  margin-bottom: 8px;
+}
+section {
+  border-bottom: 1px dashed grey;
+  margin-bottom: 10px;
+}
+
+
+
+
+.glossary-letter {
+  color: grey;
+  font-weight: bold;
+}
+.glossary-has-entries {
+  color: red;
+}
+#glossary-popout a {
+  text-decoration: none; 
+  color: inherit;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#glossary-popout .glossary-alphabet-list a.active {
+  text-decoration: underline;
+}
+
+#glossary-popout {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
